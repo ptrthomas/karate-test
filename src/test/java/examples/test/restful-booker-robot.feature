@@ -41,6 +41,7 @@ Feature: API test using RESTfulBooker application
     * param firstname = booking.firstname
     * param lastname = booking.lastname
     * method get
+    * status 200
     * match response contains { bookingid: '#(bookingid)' }
     * def toDelete = response
 
@@ -49,6 +50,7 @@ Feature: API test using RESTfulBooker application
     * param checkin = '2022-07-01'
     * param checkout = booking.bookingdates.checkout
     * method get
+    * status 200
     * match response contains { bookingid: '#(bookingid)' }
 
     # update booking
