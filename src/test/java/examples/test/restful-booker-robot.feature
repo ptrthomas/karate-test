@@ -1,4 +1,4 @@
-Feature:
+Feature: API test using RESTfulBooker application
 
   Background:
     * url 'https://restful-booker.herokuapp.com'
