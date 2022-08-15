@@ -1,7 +1,7 @@
 Feature:
 
   Background:
-    * url 'http://localhost:3001'
+    * url 'https://restful-booker.herokuapp.com'
     * header Accept = 'application/json'
     * def payload = { firstname: 'Mary', lastname: 'White', totalprice: 200, depositpaid: true }
 

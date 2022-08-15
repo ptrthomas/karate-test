@@ -15,7 +15,7 @@ Feature: API test using RESTfulBooker application
     * path 'booking'
     * method get
     * status 200
-    * match each response == { bookingid: '#number' }
+    * match each response == { bookingid: '#string' }
 
     * def booking =
     """
