@@ -1,14 +1,12 @@
 Feature:
 
   Scenario:
-    * url 'https://httpbin.org'
-    * path 'anything'
-    * request {"myKey":"myValue"}
+    * url 'https://httpbin.org/anything'
+    * request { myKey: 'myValue' }
     * method get
     * status 200
-    * match response contains deep {"json":{"myKey":"myValue"}}
-    * def myResult = response.json.myKey
+    * match response contains deep { json: { myKey: 'myValue' } }
     
-    * path 'anything/' + myResult
+    * path response.json.myKey
     * method get
     * status 200
