@@ -12,10 +12,10 @@ Feature: API test using RESTfulBooker application
     * def authToken = response.token
 
     # get all bookings
-    * path 'booking'
-    * method get
-    * status 200
-    * match each response == { bookingid: '#string' }
+    # * path 'booking'
+    # * method get
+    # * status 200
+    # * match each response == { bookingid: '#string' }
 
     * def booking =
     """
