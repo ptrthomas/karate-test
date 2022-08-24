@@ -3,7 +3,7 @@ Feature:
   Scenario:
     * url 'https://httpbin.org/anything'
     * request { myKey: 'myValue' }
-    * method get
+    * method post
     * status 200
     * match response contains deep { json: { myKey: 'myValue' } }
     
