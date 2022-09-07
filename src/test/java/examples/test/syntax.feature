@@ -1,8 +1,12 @@
 Feature:
 
 Scenario:
-* def foo =
+* def response =
 """
-let foo = { hello: 'world' };
+{ hello: 'world' }
 """
-* print 'hello'
+* match response contains
+"""
+{ hello: '#string' }
+"""
+
