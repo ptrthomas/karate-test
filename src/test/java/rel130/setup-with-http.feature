@@ -7,7 +7,7 @@ Scenario:
 * method get
 
 Scenario Outline:
-* doc { read: 'user.html' }
+* print __row
 
 Examples:
 | karate.setup().response |
