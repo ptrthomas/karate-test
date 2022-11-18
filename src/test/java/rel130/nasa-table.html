@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Image</th>
+    </tr>
+    <tr th:each="item: response">
+        <td th:text="item.identifier"></td>
+        <td th:text="item.date"></td>
+        <td style="width:200px">
+            <img th:src="`https://epic.gsfc.nasa.gov/archive/natural/2015/10/31/png/${item.image}.png`"/>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,1 @@
+response.body = { hello: 'world' }
