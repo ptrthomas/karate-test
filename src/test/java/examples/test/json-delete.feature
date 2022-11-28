@@ -15,5 +15,7 @@ Feature:
       "website": "http://chimera.labs.oreilly.com/books/1230000000561/index.html"
     }
     """
-    * remove response.isbn
-    * print response
+    * delete response.isbn
+    * match response.isbn == '#notpresent'
+    * match response contains { isbn: '#notpresent' }
+    * match response !contains { isbn: '#present' }

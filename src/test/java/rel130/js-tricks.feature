@@ -7,5 +7,5 @@ Scenario: json transform
 
 Scenario: json filter
 * def data = [{ a: 1 }, { a: 2 }, { a: 3 }, { a: 4 }]
-* def even = data.filter(x => x.a % 2 === 0)
-* print even
+* def filtered = data.filter(x => x.a > 2)
+* print filtered

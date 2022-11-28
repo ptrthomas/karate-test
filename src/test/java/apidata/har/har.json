@@ -1,0 +1,589 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "WebInspector",
+      "version": "537.36"
+    },
+    "pages": [],
+    "entries": [
+      {
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                "lineNumber": 71,
+                "columnNumber": 11647
+              },
+              {
+                "functionName": "x",
+                "scriptId": "7",
+                "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                "lineNumber": 96,
+                "columnNumber": 108910
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                "lineNumber": 96,
+                "columnNumber": 108698
+              },
+              {
+                "functionName": "e.<computed>",
+                "scriptId": "7",
+                "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                "lineNumber": 96,
+                "columnNumber": 109089
+              },
+              {
+                "functionName": "r",
+                "scriptId": "7",
+                "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                "lineNumber": 69,
+                "columnNumber": 94426
+              },
+              {
+                "functionName": "",
+                "scriptId": "7",
+                "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                "lineNumber": 69,
+                "columnNumber": 94522
+              }
+            ],
+            "parent": {
+              "description": "Promise.then",
+              "callFrames": [
+                {
+                  "functionName": "r",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 69,
+                  "columnNumber": 94505
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 69,
+                  "columnNumber": 94567
+                },
+                {
+                  "functionName": "t",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 5278
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 69,
+                  "columnNumber": 94361
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 71,
+                  "columnNumber": 12298
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 71,
+                  "columnNumber": 10855
+                },
+                {
+                  "functionName": "t.execute",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 71,
+                  "columnNumber": 42464
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 12,
+                  "columnNumber": 81326
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 0,
+                  "columnNumber": 60961
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 96,
+                  "columnNumber": 102016
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 69,
+                  "columnNumber": 88095
+                },
+                {
+                  "functionName": "r",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 81,
+                  "columnNumber": 139329
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 81,
+                  "columnNumber": 142868
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 12,
+                  "columnNumber": 81937
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 0,
+                  "columnNumber": 60961
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 96,
+                  "columnNumber": 102016
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 69,
+                  "columnNumber": 39721
+                },
+                {
+                  "functionName": "r",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 81,
+                  "columnNumber": 139329
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 81,
+                  "columnNumber": 142868
+                },
+                {
+                  "functionName": "o.onClick",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 81,
+                  "columnNumber": 44607
+                },
+                {
+                  "functionName": "i",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 55,
+                  "columnNumber": 14813
+                },
+                {
+                  "functionName": "s",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 55,
+                  "columnNumber": 10766
+                },
+                {
+                  "functionName": "executeDispatchesInOrder",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 55,
+                  "columnNumber": 11495
+                },
+                {
+                  "functionName": "p",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 12,
+                  "columnNumber": 39888
+                },
+                {
+                  "functionName": "h",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 12,
+                  "columnNumber": 40014
+                },
+                {
+                  "functionName": "e.exports",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 69,
+                  "columnNumber": 168808
+                },
+                {
+                  "functionName": "processEventQueue",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 12,
+                  "columnNumber": 41406
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 95,
+                  "columnNumber": 63856
+                },
+                {
+                  "functionName": "handleTopLevel",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 95,
+                  "columnNumber": 63878
+                },
+                {
+                  "functionName": "h",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 95,
+                  "columnNumber": 64397
+                },
+                {
+                  "functionName": "perform",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 12,
+                  "columnNumber": 58341
+                },
+                {
+                  "functionName": "batchedUpdates",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 95,
+                  "columnNumber": 62601
+                },
+                {
+                  "functionName": "batchedUpdates",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 14919
+                },
+                {
+                  "functionName": "dispatchEvent",
+                  "scriptId": "7",
+                  "url": "https://httpbin.org/flasgger_static/swagger-ui-bundle.js",
+                  "lineNumber": 95,
+                  "columnNumber": 65178
+                }
+              ]
+            }
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "fetch",
+        "cache": {},
+        "connection": "77658",
+        "request": {
+          "method": "POST",
+          "url": "https://httpbin.org/post",
+          "httpVersion": "http/2.0",
+          "headers": [
+            {
+              "name": ":method",
+              "value": "POST"
+            },
+            {
+              "name": ":authority",
+              "value": "httpbin.org"
+            },
+            {
+              "name": ":scheme",
+              "value": "https"
+            },
+            {
+              "name": ":path",
+              "value": "/post"
+            },
+            {
+              "name": "content-length",
+              "value": "0"
+            },
+            {
+              "name": "sec-ch-ua",
+              "value": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"97\", \"Chromium\";v=\"97\""
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "sec-ch-ua-mobile",
+              "value": "?0"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+            },
+            {
+              "name": "sec-ch-ua-platform",
+              "value": "\"macOS\""
+            },
+            {
+              "name": "origin",
+              "value": "https://httpbin.org"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-origin"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "cors"
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "empty"
+            },
+            {
+              "name": "referer",
+              "value": "https://httpbin.org/"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "accept-language",
+              "value": "en-GB,en-US;q=0.9,en;q=0.8"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "http/2.0",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Thu, 13 Jan 2022 05:39:16 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "content-length",
+              "value": "917"
+            },
+            {
+              "name": "server",
+              "value": "gunicorn/19.9.0"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://httpbin.org"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "size": 917,
+            "mimeType": "application/json"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": -1,
+          "_transferSize": 1070,
+          "_error": null
+        },
+        "serverIPAddress": "34.234.159.18",
+        "startedDateTime": "2022-01-13T05:39:15.895Z",
+        "time": 243.8749999855645,
+        "timings": {
+          "blocked": 0.7499999860301614,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.25,
+          "wait": 241.99999997252598,
+          "receive": 0.8750000270083547,
+          "_blocked_queueing": 0.6249999860301614
+        }
+      },
+      {
+        "_initiator": {
+          "type": "parser",
+          "url": "https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700"
+        },
+        "_priority": "VeryHigh",
+        "_resourceType": "font",
+        "cache": {},
+        "request": {
+          "method": "GET",
+          "url": "https://fonts.gstatic.com/s/titilliumweb/v10/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzY5abuWI.woff2",
+          "httpVersion": "h3",
+          "headers": [
+            {
+              "name": "sec-ch-ua",
+              "value": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"97\", \"Chromium\";v=\"97\""
+            },
+            {
+              "name": "Referer",
+              "value": "https://fonts.googleapis.com/"
+            },
+            {
+              "name": "Origin",
+              "value": "https://httpbin.org"
+            },
+            {
+              "name": "sec-ch-ua-mobile",
+              "value": "?0"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+            },
+            {
+              "name": "sec-ch-ua-platform",
+              "value": "\"macOS\""
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "h3",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 12 Jan 2022 20:40:11 GMT"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "age",
+              "value": "32345"
+            },
+            {
+              "name": "content-security-policy-report-only",
+              "value": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "cross-origin"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+            },
+            {
+              "name": "content-length",
+              "value": "12276"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "last-modified",
+              "value": "Tue, 29 Jun 2021 22:47:05 GMT"
+            },
+            {
+              "name": "server",
+              "value": "sffe"
+            },
+            {
+              "name": "report-to",
+              "value": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}"
+            },
+            {
+              "name": "content-type",
+              "value": "font/woff2"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "name": "cache-control",
+              "value": "public, max-age=31536000"
+            },
+            {
+              "name": "accept-ranges",
+              "value": "bytes"
+            },
+            {
+              "name": "timing-allow-origin",
+              "value": "*"
+            },
+            {
+              "name": "cross-origin-opener-policy-report-only",
+              "value": "same-origin; report-to=\"apps-themes\""
+            },
+            {
+              "name": "expires",
+              "value": "Thu, 12 Jan 2023 20:40:11 GMT"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "size": 12276,
+            "mimeType": "font/woff2"
+          },
+          "redirectURL": "",
+          "headersSize": -1,
+          "bodySize": -1,
+          "_transferSize": 12303,
+          "_error": null
+        },
+        "serverIPAddress": "142.250.196.35",
+        "startedDateTime": "2022-01-13T05:39:16.168Z",
+        "time": 62.12499999674037,
+        "timings": {
+          "blocked": 11.249999960884452,
+          "dns": 0,
+          "ssl": 46.75,
+          "connect": 46.875,
+          "send": 0,
+          "wait": 2.999999988358468,
+          "receive": 1.0000000474974513,
+          "_blocked_queueing": 11.124999960884452
+        }
+      }
+    ]
+  }
+}
