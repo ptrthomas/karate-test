@@ -1,6 +1,6 @@
 Feature:
 
-  Scenario:
+  Scenario: first scenario
     * def response =
     """
     { "results": [
@@ -13,7 +13,7 @@ Feature:
     * def id = response.results.find(x => x.name == 'Sample2').id
     * match id == 'U-456'
 
-  Scenario:
+  Scenario: second scenario
     * def response =
     """
     {
