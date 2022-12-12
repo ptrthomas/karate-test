@@ -5,12 +5,6 @@ Feature:
     * header Accept = 'application/json'
     * def payload = { firstname: 'Mary', lastname: 'White', totalprice: 200, depositpaid: true }
 
-  Scenario: get booking should return 200
-    Given path 'booking'
-    When method get
-    Then status 200
-    And match each response == { bookingid: '#number' }
-
   Scenario: get booking by id should return 200
     Given path 'booking', 1
     When method get
