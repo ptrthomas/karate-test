@@ -1,0 +1,133 @@
+const nodes = [];
+const flow = {label: 'Animals', nodes: nodes};
+
+nodes.push({
+  type: 'choice',
+  label: 'Does it have wings?',
+  data: {
+    inputName: 'wings',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'choice',
+  executeIf: 'wings',
+  label: 'Does it lay eggs?',
+  data: {
+    inputName: 'eggs',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'choice',
+  executeIf: 'eggs',
+  label: 'Does it fly?',
+  data: {
+    inputName: 'flies',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'outcome',
+  executeIf: 'eggs && flies',
+  label: 'Goose'
+});
+
+nodes.push({
+  type: 'outcome',
+  executeIf: 'eggs',
+  label: 'Chicken'
+});
+
+nodes.push({
+  type: 'choice',
+  executeIf: 'wings',
+  label: 'Is it blind?',
+  data: {
+    inputName: 'blind',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'outcome',
+  executeIf: '!eggs && blind',
+  label: 'Bat'
+});
+
+nodes.push({
+  type: 'choice',
+  executeIf: '!wings',
+  label: 'Does it have scales?',
+  data: {
+    inputName: 'scales',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'choice',
+  executeIf: 'scales',
+  label: 'Does it swim?',
+  data: {
+    inputName: 'swims',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'outcome',
+  executeIf: 'scales && swims',
+  label: 'Fish'
+});
+
+nodes.push({
+  type: 'outcome',
+  executeIf: 'scales',
+  label: 'Snake'
+});
+
+nodes.push({
+  type: 'choice',
+  executeIf: '!wings',
+  label: 'Does it have tusks?',
+  data: {
+    inputName: 'tusks',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'outcome',
+  executeIf: 'tusks',
+  label: 'Elephant'
+});
+
+nodes.push({
+  type: 'outcome',
+  label: '?'
+});

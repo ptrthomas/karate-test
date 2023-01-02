@@ -1,0 +1,106 @@
+const nodes = [];
+const flow = {label: 'Credit Risk', nodes: nodes};
+
+nodes.push({
+  type: 'input',
+  label: 'What is your income?',
+  data: {
+    inputName: 'income',
+    examples: [
+      {value: 10000},
+      {value: 20000},
+      {value: 40000}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'script',
+  label: 'Business rules for income band',
+  data: {
+    assignments: [
+      {name: 'income_low', expression: 'income < 15000'},
+      {name: 'income_moderate', expression: 'income >= 15000 && income < 35000'},
+      {name: 'income_high', expression: 'income > 35000'}
+    ]
+  }
+});
+
+nodes.push({
+  executeIf: 'income_low',
+  type: 'outcome',  
+  label: 'High Risk - Income Too Low'
+});
+
+nodes.push({
+  type: 'choice',
+  label: 'What is your credit history?',
+  data: {
+    inputName: 'credit_history',
+    choices: [
+      {label: 'Unknown', value: 'unknown'},
+      {label: 'Bad', value: 'bad'},
+      {label: 'Good', value: 'good'}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'script',
+  label: 'Business rules for credit risk',
+  data: {
+    assignments: [
+      {name: 'risk_high', expression: "income_moderate && credit_history == 'bad'"},
+      {name: 'risk_moderate', expression: "income_moderate && credit_history == 'good' || income_high && credit_history == 'bad'"},
+      {name: 'risk_low', expression: "income_high && credit_history != 'bad'"},
+      {name: 'get_debt', expression: "income_moderate && credit_history == 'unknown'"}
+    ]
+  }
+});
+
+nodes.push({
+  executeIf: 'get_debt',
+  type: 'choice',
+  label: 'What is your outstanding debt like?',
+  data: {
+    inputName: 'debt_high',
+    choices: [
+      {label: 'High', value: true},
+      {label: 'Low', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'script',
+  label: 'Business rules for outstanding debt',
+  data: {
+    assignments: [
+      {name: 'risk_high', expression: 'debt_high'},
+      {name: 'risk_moderate', expression: '!debt_high'}
+    ]
+  }
+});
+
+nodes.push({
+  executeIf: 'risk_low',
+  type: 'outcome',  
+  label: 'Low Risk'
+});
+
+nodes.push({
+  executeIf: 'risk_high',
+  type: 'outcome',  
+  label: 'High Risk'
+});
+
+nodes.push({
+  executeIf: 'risk_moderate',
+  type: 'outcome',  
+  label: 'Moderate Risk'
+});
+
+nodes.push({
+  type: 'outcome',  
+  label: 'no match'
+});

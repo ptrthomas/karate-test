@@ -1,0 +1,115 @@
+const nodes = [];
+const flow = {label: 'Pilot Eligibility', nodes: nodes};
+
+nodes.push({
+  type: 'choice',
+  label: 'Have you completed high-school?',
+  data: {
+    inputName: 'high_school',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'decision',
+  label: 'Check education requirements',
+  data: {
+    decisions: [
+      {expression: 'high_school', callIfTrue: 'get_age'}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'outcome',
+  label: 'Not Eligible. You must have completed high-school.'
+});
+
+nodes.push({
+  refName: 'get_age',
+  type: 'input',
+  label: 'What is your age?',
+  data: {
+    inputName: 'age',
+    examples: [
+      {value: 15},
+      {value: 16},
+      {value: 17},
+      {value: 30},
+      {value: 65}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'decision',
+  label: 'Check age limits',
+  data: {
+    decisions: [
+      {expression: 'age < 16', callIfTrue: 'age_lt_16'},
+      {expression: 'age >= 60', callIfTrue: 'age_ge_60'}
+    ]
+  }
+});
+
+nodes.push({
+  refName: 'age_lt_16',
+  type: 'outcome',
+  label: 'Not Eligible. You must be 16 or older.'
+});
+
+nodes.push({
+  refName: 'age_ge_60',
+  type: 'outcome',
+  label: 'Not Eligible. You must be less than 60 years old.'
+});
+
+nodes.push({
+  type: 'choice',
+  label: 'Do you have perfect vision in at least one eye or both?',
+  data: {
+    inputName: 'perfect_vision',
+    choices: [
+      {label: 'Yes', value: true},
+      {label: 'No', value: false}
+    ]
+  }
+});
+
+nodes.push({
+  type: 'decision',
+  label: 'Check license eligibility',
+  data: {
+    decisions: [
+      {expression: '!perfect_vision', callIfTrue: 'not_eligible_vision'},
+      {expression: 'age == 16', callIfTrue: 'age_eq_16'},
+      {expression: 'age == 17', callIfTrue: 'age_eq_17'}
+    ]
+  }
+});
+
+nodes.push({
+  refName: 'not_eligible_vision',
+  type: 'outcome',
+  label: 'Not Eligible. At least one eye should have perfect (20/20) vision.'
+});
+
+nodes.push({
+  refName: 'age_eq_17',
+  type: 'outcome',
+  label: 'You are eligible for Private and Student Pilot Licenses.'
+});
+
+nodes.push({
+  refName: 'age_eq_16',
+  type: 'outcome',
+  label: 'You are eligible for a Student Pilot License.'
+});
+
+nodes.push({
+  type: 'outcome',
+  label: 'You are eligible for Commercial, Private and Student Pilot Licenses.'
+});
