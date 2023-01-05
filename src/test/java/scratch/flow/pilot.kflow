@@ -30,11 +30,11 @@ nodes.push({
 
 nodes.push({
   refName: 'get_age',
-  type: 'input',
+  type: 'choice',
   label: 'What is your age?',
   data: {
     inputName: 'age',
-    examples: [
+    choices: [
       {value: 15},
       {value: 16},
       {value: 17},
