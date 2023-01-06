@@ -99,8 +99,3 @@ nodes.push({
   type: 'outcome',  
   label: 'Moderate Risk'
 });
-
-nodes.push({
-  type: 'outcome',  
-  label: 'no match'
-});
