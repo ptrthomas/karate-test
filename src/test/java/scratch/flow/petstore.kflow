@@ -1,0 +1,35 @@
+{
+  "settings": {},
+  "nodes": [
+    {
+      "data": {
+        "filePath": "petstore.yaml",
+        "specName": "petstore"
+      },
+      "index": 0,
+      "id": "1",
+      "label": "Swagger Spec",
+      "type": "api-spec"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "GET",
+          "url": null,
+          "path": "pet/100",
+          "body": ""
+        },
+        "response": {
+          "body": ""
+        },
+        "specName": "petstore"
+      },
+      "index": 1,
+      "id": "2",
+      "label": "Get Pets",
+      "type": "http"
+    }
+  ],
+  "environments": {},
+  "label": null
+}

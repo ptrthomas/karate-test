@@ -4,36 +4,32 @@ flow.environments = {_: {variables: {urlBase: {value: 'http://localhost:8090'}}}
 flow.nodes = nodes;
 
 nodes.push(
-        {type: 'configure', data: {url: '${urlBase}'}},
-        {type: 'choice', label: 'Select Domain', data: {
+        {type: 'http-config', label: 'Defaults', data: {url: '${urlBase}'}},
+        {type: 'fork', label: 'Select Domain', data: {
             inputName: 'domain',
-            choices: [
-              {label: 'Airline', value: 'airline'},
-              {label: 'Hotel', value: 'hotel'}
+            forks: [
+              {label: 'Airline', value: 'airline', callRefName: 'ref_airline'},
+              {label: 'Hotel', value: 'hotel', callRefName: 'ref_hotel'}
             ]}},
-        {type: 'http', label: 'Airline Availability Search', executeIf: "domain=='airline'", data: {
+        {type: 'http', label: 'Airline Search', refName:'ref_airline', data: {
             request: {path: 'availability', method: 'POST', body: {travelers: [{age: 30}]}},
             response: {body: {offers: [
                   {offerId: 'OFF-1', name: 'Airline One', cost: '100.00', currency: 'USD'},
                   {offerId: 'OFF-2', name: 'Airline Two', cost: '200.00', currency: 'USD'}
-                ]}},
-            doc: {read: 'data/http-default.html'}
+                ]}}
           }},
-        {type: 'http', label: 'Hotel Availability Search', executeIf: "domain=='hotel'", data: {
+        {type: 'http', label: 'Hotel Search', refName:'ref_hotel', data: {
             request: {path: 'availability', method: 'POST', body: {travelers: [{age: 30}]}},
             response: {body: {offers: [
                   {offerId: 'OFF-1', name: 'Hotel One', cost: '100.00', currency: 'USD'},
                   {offerId: 'OFF-2', name: 'Hotel Two', cost: '200.00', currency: 'USD'}
-                ]}},
-            doc: {read: 'data/http-default.html'}
+                ]}}
           }},
         {type: 'http', label: 'Order an offer', data: {
             request: {path: 'offers', method: 'POST', body: {offerId: 'OFF-1'}},
-            response: {body: {orderId: 'ORD-1', offerId: 'OFF-1'}},
-            doc: {read: 'data/http-default.html'}
+            response: {body: {orderId: 'ORD-1', offerId: 'OFF-1'}}
           }},
         {type: 'http', label: 'Get Order', data: {
             request: {path: 'orders/ORD-1', method: 'GET'},
-            response: {body: {orderId: 'ORD-1', offerId: 'OFF-1'}},
-            doc: {read: 'data/http-default.html'}
+            response: {body: {orderId: 'ORD-1', offerId: 'OFF-1'}}
           }});
