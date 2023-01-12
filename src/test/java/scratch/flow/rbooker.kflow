@@ -1,0 +1,83 @@
+{
+  "settings": {
+    "liveMode": true
+  },
+  "nodes": [
+    {
+      "data": {
+        "url": "https://restful-booker.herokuapp.com"
+      },
+      "index": 0,
+      "id": "1",
+      "label": "Base URL",
+      "type": "http-config"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "POST",
+          "url": null,
+          "path": "auth",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "username": "admin",
+            "password": "password123"
+          }
+        },
+        "response": {
+          "status": 200,
+          "headers": "",
+          "body": ""
+        },
+        "specName": null,
+        "docType": null,
+        "docValue": "This is a way to get an auth token.\n\nWe need to send a username and password in the request body."
+      },
+      "index": 1,
+      "id": "2",
+      "label": null,
+      "type": "http"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "POST",
+          "url": null,
+          "path": "booking",
+          "headers": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "firstname": "Anthony",
+            "lastname": "ODonnell",
+            "totalprice": 500,
+            "depositpaid": true,
+            "additionalneeds": "Clearly Defined Requirements",
+            "bookingdates": {
+              "checkin": "2022-08-30",
+              "checkout": "2022-09-10"
+            }
+          }
+        },
+        "response": {
+          "body": ""
+        },
+        "specName": null
+      },
+      "index": 2,
+      "id": "3",
+      "label": null,
+      "type": "http"
+    }
+  ],
+  "environments": {},
+  "label": null
+}

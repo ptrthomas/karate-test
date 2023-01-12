@@ -1,0 +1,75 @@
+{
+  "settings": {},
+  "nodes": [
+    {
+      "nextRefId": "2",
+      "data": {
+        "assignments": [
+          {
+            "name": "payload",
+            "expression": "(scenario) => {\nif (scenario === 'happy') return ({ happy: 'path' });\nif (scenario === 'validation') return ({ validation: 'failed' });\nreturn ({ user: 'not found' });\n}"
+          }
+        ]
+      },
+      "index": 0,
+      "id": "1",
+      "label": "Entities",
+      "type": "script",
+      "nextRefName": "66695511-a881-4984-bd01-c2141e4cb291"
+    },
+    {
+      "data": {
+        "inputName": "scenario",
+        "inputType": "string",
+        "forks": [
+          {
+            "value": "happy",
+            "label": "Happy Path"
+          },
+          {
+            "value": "validation",
+            "label": "Validation Failed",
+            "callRefId": null
+          },
+          {
+            "value": "userNotFound",
+            "label": "User Not Found",
+            "callRefId": null
+          }
+        ]
+      },
+      "index": 1,
+      "id": "2",
+      "label": "Scenario",
+      "type": "fork",
+      "refName": "66695511-a881-4984-bd01-c2141e4cb291"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "POST",
+          "url": null,
+          "path": "book",
+          "headers": [],
+          "body": {
+            "request": "details"
+          }
+        },
+        "response": {
+          "status": 200,
+          "headers": [],
+          "body": "(payload(scenario))"
+        },
+        "specName": null,
+        "docType": null,
+        "docValue": "We see the response changes depending on the request validation."
+      },
+      "index": 2,
+      "id": "3",
+      "label": "Create Booking",
+      "type": "http"
+    }
+  ],
+  "environments": {},
+  "label": null
+}
