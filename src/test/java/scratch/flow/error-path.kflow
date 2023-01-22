@@ -62,7 +62,7 @@
         },
         "specName": null,
         "docType": null,
-        "docValue": "We see the response changes depending on the request validation."
+        "docValue": "We see the response changes depending on the request validation.\n\n### This is a [link](https://github.com/karatelabs/karate)\n\nHere is an example of a markdown table below:\n\n| First Header  | Second Header |\n| ------------- | ------------- |\n| Content Cell  | Content Cell  |\n| Content Cell  | Content Cell  |\n"
       },
       "index": 2,
       "id": "3",
@@ -71,5 +71,6 @@
     }
   ],
   "environments": {},
+  "filePath": "/Users/peter/dev/ycode/karate-test/src/test/java/scratch/flow/error-path.kflow",
   "label": null
 }

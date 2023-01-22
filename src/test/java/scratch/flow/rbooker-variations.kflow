@@ -1,0 +1,152 @@
+{
+  "settings": {
+    "liveMode": true
+  },
+  "nodes": [
+    {
+      "nextRefId": "2",
+      "data": {
+        "url": "https://restful-booker.herokuapp.com"
+      },
+      "index": 0,
+      "id": "1",
+      "label": "Base URL",
+      "type": "http-config",
+      "nextRefName": "69690f60-c7f8-406e-8f93-db314f21dd82"
+    },
+    {
+      "data": {
+        "inputName": "scenario",
+        "inputType": "string",
+        "forks": [
+          {
+            "value": "happyPath",
+            "label": "Happy Path",
+            "callRefName": "760da53e-5cb6-419d-96fc-f998415052f4",
+            "callRefId": "3"
+          },
+          {
+            "value": "bookingInvalid",
+            "label": "Booking Invalid",
+            "callRefName": "c7e65c43-69c5-4fa3-9f4e-5fe70f086c88",
+            "callRefId": "5"
+          }
+        ]
+      },
+      "index": 1,
+      "id": "2",
+      "label": "Choose Scenario",
+      "type": "fork",
+      "refName": "69690f60-c7f8-406e-8f93-db314f21dd82"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "POST",
+          "url": null,
+          "path": "auth",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "username": "admin",
+            "password": "password123"
+          }
+        },
+        "response": {
+          "status": 200,
+          "headers": "",
+          "body": ""
+        },
+        "specName": null,
+        "docType": null,
+        "docValue": "This is a way to get an auth token.\n\nWe need to send a username and password in the request body."
+      },
+      "index": 2,
+      "id": "3",
+      "label": null,
+      "type": "http",
+      "refName": "760da53e-5cb6-419d-96fc-f998415052f4"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "POST",
+          "url": null,
+          "path": "booking",
+          "headers": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "firstname": "Anthony",
+            "lastname": "ODonnell",
+            "totalprice": 500,
+            "depositpaid": true,
+            "additionalneeds": "Clearly Defined Requirements",
+            "bookingdates": {
+              "checkin": "2022-08-30",
+              "checkout": "2022-09-10"
+            }
+          }
+        },
+        "response": {
+          "status": 200,
+          "headers": [],
+          "body": ""
+        },
+        "specName": null,
+        "docType": null,
+        "docValue": "For a successful booking, the response will include a `bookingid` which will be of type `number`.\n\nThe data sent in the booking will be returned as a `booking` JSON property in the response."
+      },
+      "index": 3,
+      "id": "4",
+      "label": null,
+      "type": "http"
+    },
+    {
+      "data": {
+        "request": {
+          "method": "POST",
+          "url": null,
+          "path": "booking",
+          "headers": [],
+          "body": {
+            "firstname": "Anthony",
+            "lastname": "ODonnell",
+            "totalprice": 500,
+            "depositpaid": true,
+            "additionalneeds": "Clearly Defined Requirements",
+            "bookingdates": {
+              "checkin": "2022-08-30",
+              "checkout": "2022-09-10"
+            }
+          }
+        },
+        "response": {
+          "status": 200,
+          "headers": [],
+          "body": ""
+        },
+        "specName": null,
+        "docType": null,
+        "docValue": "If the `Accept` header is not provided, the server will respond with the 418 error code.\n\nNrmally the `Accept` header will be `application/json`."
+      },
+      "index": 4,
+      "id": "5",
+      "label": "Missing Header",
+      "type": "http",
+      "refName": "c7e65c43-69c5-4fa3-9f4e-5fe70f086c88"
+    }
+  ],
+  "environments": {
+    "_": {}
+  },
+  "filePath": "/Users/peter/dev/ycode/karate-test/src/test/java/scratch/flow/rbooker-variations.kflow",
+  "label": null
+}
