@@ -1,5 +1,5 @@
 const nodes = [];
-const flow = {label: 'Credit Risk', nodes: nodes};
+const flow = {label: 'Credit Risk Demo', nodes: nodes};
 
 nodes.push({
   type: 'input',

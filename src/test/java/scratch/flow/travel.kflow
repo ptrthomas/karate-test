@@ -1,5 +1,5 @@
 const nodes = [];
-const flow = {label: 'Travel Booking', settings: {liveMode: false}};
+const flow = {label: 'Travel Reservation', settings: {liveMode: false}};
 flow.environments = {_: {variables: {urlBase: {value: 'http://localhost:8090'}}}};
 flow.nodes = nodes;
 
