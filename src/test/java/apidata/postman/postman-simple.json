@@ -1,53 +1,109 @@
 {
-    "info": {
-        "_postman_id": "530089f6-73d0-46d9-99af-46c93df7200c",
-        "name": "test collection",
-        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-    },
-    "item": [{
-            "name": "https://reqres.in/api/users/2",
-            "id": "1967d45b-8960-49e0-8738-b6bc404928f3",
-            "request": {
-                "method": "GET",
-                "header": [],
-                "url": "https://reqres.in/api/users/2"
-            },
-            "response": []
-        }, {
-            "name": "https://reqres.in/api/users",
-            "id": "84f0c342-ea1a-4b29-b74e-a38166a64a89",
-            "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
-                    "options": {
-                        "raw": {
-                            "language": "json"
-                        }
-                    }
-                },
-                "url": "https://reqres.in/api/users"
-            },
-            "response": []
-        }, {
-            "name": "https://reqres.in/api/users/2",
-            "id": "b9ba1fcb-fcb5-41b8-8c0d-8879764b20b3",
-            "request": {
-                "method": "PUT",
-                "header": [],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
-                    "options": {
-                        "raw": {
-                            "language": "json"
-                        }
-                    }
-                },
-                "url": "https://reqres.in/api/users/2"
-            },
-            "response": []
-        }]
+	"info": {
+		"_postman_id": "4ae44873-1add-4b62-93ef-77b11e61546f",
+		"name": "Simple Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12593113"
+	},
+	"item": [
+		{
+			"name": "Simple POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response Contains Expected\", () => {",
+							"  const expected = { \"json\": {\"myKey\": \"myValue\"} };",
+							"  pm.expect(pm.response.json()).to.deep.include(expected);",
+							"});",
+							"",
+							"pm.collectionVariables.set(\"myResult\", pm.response.json().json.myKey);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"variable_key\", \"variable_value\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"myKey\": \"myValue\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/anything",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"anything"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.org/anything/{{myResult}}",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"anything",
+						"{{myResult}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "myResult",
+			"value": ""
+		}
+	]
 }
