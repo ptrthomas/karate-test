@@ -1,0 +1,31 @@
+curl 'https://stackoverflow.com/questions/70721540/setting-a-value-into-a-json-using-jsonpath-in-karate' \
+  -H 'authority: stackoverflow.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'sec-fetch-dest: document' \
+  -H 'referer: https://stackoverflow.com/questions/tagged/karate' \
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'cookie: prov=12becb9a-c950-1e31-224a-b65fad3d872f; _ga=GA1.2.1637008143.1637421436; _gid=GA1.2.1756378764.1637421436; OptanonAlertBoxClosed=2021-11-20T15:17:19.830Z; OptanonConsent=isIABGlobal=false&datestamp=Sat+Nov+20+2021+20%3A47%3A19+GMT%2B0530+(India+Standard+Time)&version=6.10.0&hosts=&landingPath=NotLandingPage&groups=C0003%3A1%2CC0004%3A1%2CC0002%3A1%2CC0001%3A1; __gads=ID=b7b74b0f28b81d66:T=1637556395:S=ALNI_Ma_Q8TL9LXnJDFaS75AnNLRoXGV2g; sgt=id=7a407a9e-0a14-433e-83e7-18d806fb37dd; notice-ssb=2%3B1640840061767; acct=t=Vh2504B62UIGXp6gOvyfPJ6yVS6CnKp0&s=TLA7oCg%2fy9RkngRlpHqguSll%2fODymf98; _gat=1' \
+  --compressed ;
+curl 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'Referer: https://stackoverflow.com/' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  --compressed ;
+curl 'https://cdn.sstatic.net/Js/third-party/stacks/stacks.min.js?v=b0f9a80d741d' --compressed ;
+curl 'https://cdn.sstatic.net/Js/stub.en.js?v=4a4c2a7d3477' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"' \
+  -H 'Referer: https://stackoverflow.com/' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  --compressed ;

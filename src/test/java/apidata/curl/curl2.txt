@@ -1,0 +1,7 @@
+curl --location --request PATCH 'https://reqres.in/api/users/2' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "foo",
+    "job": "QA Automation"
+}'
+
