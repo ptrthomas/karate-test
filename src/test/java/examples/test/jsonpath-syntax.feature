@@ -1,6 +1,12 @@
 Feature:
 
 Scenario:
+* def response = [{ id: 'hello', password: 'world'}]
+* def bar = 'hello'
+* def result = karate.jsonPath(response, "$[?(@.id == '" + bar + "')].password")[0]
+* print result
+
+Scenario:
 * def cat = 
 """
 {
