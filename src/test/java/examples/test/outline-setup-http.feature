@@ -2,12 +2,13 @@ Feature: three HTTP calls in a loop
 
 @setup
 Scenario:
-# do some http stuff here
-* def data = [ { myNum: 1 }, { myNum: 2 }, { myNum: 3 } ]
+* url 'https://jsonplaceholder.typicode.com/users'
+* method get
 
-Scenario Outline: using value: ${myNum}
-* url `https://httpbin.org/anything/${myNum}`
+Scenario Outline: id: ${id} | name: ${name}
+* url `https://httpbin.org/anything/${id}`
+* param name = name
 * method get
 
 Examples:
-| karate.setup().data |
+| karate.setup().response |
