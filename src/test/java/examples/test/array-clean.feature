@@ -2,7 +2,8 @@ Feature:
 
   Scenario:
     * def response = ['2.16%','1.34%','1.32%']
-    * def cleaned = response.map(x => x.replace('%', '') * 1)
+    * def cleaned = karate.map(response, function(x){ return x.replace('%', '') * 1 })
+    # * def cleaned = response.map(x => x.replace('%', '') * 1)
     * match cleaned == [2.16, 1.34, 1.32]
 
   Scenario:
