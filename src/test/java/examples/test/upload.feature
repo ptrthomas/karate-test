@@ -17,3 +17,11 @@ Scenario: file and form fields
 * multipart field user = 'username'
 * multipart field id = 'id'
 * method post
+
+Scenario: zero length file and form fields
+* url 'https://httpbin.org/post'
+* multipart file dataFiles = { value: '', filename: 'test.txt', contentType: 'text-plain' }
+* multipart field date = 'somedate'
+* multipart field user = 'username'
+* multipart field id = 'id'
+* method post
